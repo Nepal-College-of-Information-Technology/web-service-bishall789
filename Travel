@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A traveler's guide to beautiful destinations.">
+    <title>Traveler's Paradise</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #2C3E50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495E;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            display: block;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #1ABC9C;
+        }
+        section {
+            padding: 2rem 5%;
+        }
+        section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #2C3E50;
+        }
+        .about, .destinations, .gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about p, .destinations p {
+            max-width: 60%;
+            margin: 0 auto;
+        }
+        .destination {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+        }
+        .destination img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            margin: 1rem;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #34495E;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #1ABC9C;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #16A085;
+        }
+        @media (max-width: 768px) {
+            .destination {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Traveler's Paradise</h1>
+        <p>Your journey to the most beautiful destinations around the world.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are passionate travelers who want to inspire you to explore the beauty of the world. From exotic beaches to majestic mountains, we provide detailed travel guides and recommendations to make your journeys unforgettable.</p>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination">
+            <img src="https://via.placeholder.com/300x200" alt="Paris">
+            <h3>Paris, France</h3>
+            <p>Explore the city of lights, art, and romance. A perfect getaway for lovers and culture enthusiasts.</p>
+        </div>
+        <div class="destination">
+            <img src="https://via.placeholder.com/300x200" alt="Kyoto">
+            <h3>Kyoto, Japan</h3>
+            <p>Experience traditional Japan with its beautiful temples, gardens, and tranquil atmosphere.</p>
+        </div>
+        <div class="destination">
+            <img src="https://via.placeholder.com/300x200" alt="Cape Town">
+            <h3>Cape Town, South Africa</h3>
+            <p>Discover stunning landscapes, wildlife, and culture in one of the most beautiful cities on Earth.</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="image-gallery">
+            <img src="https://via.placeholder.com/500x300" alt="Image 1">
+            <img src="https://via.placeholder.com/500x300" alt="Image 2">
+            <img src="https://via.placeholder.com/500x300" alt="Image 3">
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Traveler's Paradise. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Basic form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const message = document.querySelector('#message').value;
+            
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                e.preventDefault();  // Stop form submission
+            }
+        });
+    </script>
+
+</body>
+</html>
